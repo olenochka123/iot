@@ -40,4 +40,13 @@ public abstract class Accessory {
 		this.producer = producer;
 		this.color = color;
 	}
+	
+	public String getHeaders() {
+		return "id" + ',' + "name" + ',' + "price" + ',' + "weight" + ',' + "producer" + ',' + "color";
+	}
+	
+	public String toCSV() {
+		return Integer.toString(id) + ',' + name + ',' + Float.toString(price) + ',' + Float.toString(weight) 
+		+ ',' + producer + ',' + color;
+	}
 }
